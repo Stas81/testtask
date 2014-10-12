@@ -1,0 +1,17 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}
+    Basic Symfony2 Application!
+{% endblock %}
+
+{% block body %}
+    <h1> This is a TEST product application </h1>
+    <table>
+    {% for category in categories %}
+        <tr>
+            <td style="border: 1px solid #000;"><a href='list/{{ category.id }}'>{{ category.name }}</a></td>
+            <td style="border: 1px solid #000;">{{ category.description }}</td>
+        <tr>
+    {% endfor %}
+    </table>
+{% endblock %}

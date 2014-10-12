@@ -1,0 +1,29 @@
+{% extends 'StasProductBundle:Main:list.html.twig' %}
+
+{% block body %}
+    <h2> here's list of products in category: {{ category }} </h2>
+    <table>
+    {% for product in products %}
+        <tr>
+            <td style="border: 1px solid #000;">{{ product.name }}</td>
+            <td style="border: 1px solid #000;">{{ product.price }}</td>
+            <td style="border: 1px solid #000;">{{ product.description }}</td>
+        <tr>
+    {% endfor %}
+    
+    {% if pagescount >1 %}
+        <tr>
+            <td>
+                {% for i in 1..pagescount %}
+                    {% if i == page %}
+                        {{ page }}
+                    {% else %}
+                        <a href='/list/{{ category_id }}/{{ i }}'>{{ i }}</a> 
+                    {% endif %}
+                {% endfor %}
+            </td>
+        </tr>
+    {% endif %}
+    
+    </table>
+{% endblock %}

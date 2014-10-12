@@ -1,0 +1,7 @@
+stas_product_categories:
+    path:     /list
+    defaults: { _controller: StasProductBundle:Main:list }
+
+stas_product_products:
+    path:     /list/{category_id}/{page}
+    defaults: { _controller: StasProductBundle:Main:listProducts, page: 1 }

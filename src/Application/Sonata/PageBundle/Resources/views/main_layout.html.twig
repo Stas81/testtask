@@ -1,0 +1,25 @@
+{% extends "StasProductBundle::base.html.twig" %}
+
+{% block mainbody %}
+        
+    {% block header %}
+        {{ sonata_page_render_container('header',page) }}
+    {% endblock %}
+
+    {% block content_top %}
+        {{ sonata_page_render_container('content_top',page) }}
+    {% endblock %}
+
+    {% block content %}
+        {{ sonata_page_render_container('content',page) }}
+    {% endblock %}
+
+    {% block content_bottom %}
+        {{ sonata_page_render_container('content_bottom',page) }}
+    {% endblock %}
+
+    {% block footer %}
+        {{ sonata_page_render_container('footer', page) }}
+    {% endblock %}
+
+{% endblock %}
