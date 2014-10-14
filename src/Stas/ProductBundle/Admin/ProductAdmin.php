@@ -26,7 +26,7 @@ class ProductAdmin extends Admin {
                 ->with('General')
                     ->add('name', 'text', array('label' => 'Product Name'))
                     ->add('category', 'entity', array('class' => 'Stas\ProductBundle\Entity\Category'))
-                    ->add('price', 'number', array('label' => "Product Price")) //if no type is specified, SonataAdminBundle tries to guess it
+                    ->add('price', 'money', array('label' => "Product Price")) //if no type is specified, SonataAdminBundle tries to guess it
                 ->end()
                 ->with('Additional')
                     ->add('description', 'textarea', array('label' => 'Product Description', 'required' => false))
